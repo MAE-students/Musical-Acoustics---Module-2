@@ -1,0 +1,45 @@
+% Use the custom class defined in GDTReportClass.cls
+\documentclass{GDTReportClass}
+
+% Set document metadata using custom commands from the class file
+\title{Module 2 -- Theory Notes}  % Titolo specifico del progetto
+\subtitle{String and Wind instrument, Drums and Percussions}
+\info{Course held during A.A. 2025/2026 by prof. Fabio Antonacci}  % Sottotitolo coerente con la nomenclatura del corso
+\course{Musical Acoustics}
+
+\author{Giacomo De Toni}  % Authors
+\PID{}
+\SID{}  % Student ID numbers
+\advisor{}  % Advisor's name
+
+% Embed metadata for the PDF file
+\begin{filecontents}{\jobname.xmpdata}
+    \Title{Musical Acoustics 2}
+    \Author{Giacomo De Toni}
+    \Language{en-EN}
+    \Keywords{Musical \sep Acoustics \sep Theory \sep PoliMI}
+\end{filecontents}
+
+\begin{document}
+
+    % Generate the front matter (title page, abstract, table of contents, etc.)
+    \input{01_FrontMatter/01_titlePage}     % Title page
+    \settingfrontmatter  % Configure front matter settings
+    \input{01_FrontMatter/03_summaries}     % Summaries
+
+    % Configure main content settings (resets page numbering, chapter counters, etc.)
+    \settingmaincontent  
+
+    % Include the main chapters from separate files
+    \input{02_MainMatter/01_chapter}
+    \input{02_MainMatter/02_chapter}
+    \input{02_MainMatter/03_chapter}
+    \input{02_MainMatter/04_chapter}
+    \input{02_MainMatter/05_chapter}
+    \input{02_MainMatter/06_chapter}
+    \input{02_MainMatter/07_chapter}
+    \input{02_MainMatter/08_chapter}
+    \input{02_MainMatter/09_chapter}
+    \input{02_MainMatter/10_chapter}
+    
+\end{document}
